@@ -16,6 +16,10 @@ def jsonrpc(request):
         response.deserialized(), status=response.http_status, safe=False
     )
 
+@method
+def ping():
+    return "pong"
+
 # 引数リストにcontextを追加する
 @method
 def division(context, dividend, divisor):
